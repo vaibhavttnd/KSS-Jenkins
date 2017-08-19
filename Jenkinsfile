@@ -23,19 +23,7 @@ pipeline {
     }
     stage('Build Artifacts') {
       steps {
-        when {
-                expression { env.GIT_BRANCH == 'staging' } 
-        }
-        steps {
-           sh 'mvn package'
-        }
-         when {
-                expression { env.GIT_BRANCH == 'qa' } 
-        }
-         steps {
-             lock('myResource') {
-    echo "locked build"
-  }
+        sh 'mvn package'
         }
       }
     }
