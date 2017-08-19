@@ -18,7 +18,7 @@ pipeline {
     }
     stage('Test Cases') {
       steps {
-        sh 'maven test'
+        sh 'mvn test'
       }
     }
     stage('Build Artifacts') {
