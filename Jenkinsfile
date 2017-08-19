@@ -13,7 +13,7 @@ pipeline {
     }
     stage('Git checkout') {
       steps {
-        git(url: 'https://github.com/vaibhavttnd/KSS-Jenkins.git', credentialsId: '93232a53-4af3-40d7-b2c7-b7c15a45f879', branch: 'master', changelog: true, poll: true)
+        git(url: 'https://github.com/vaibhavttnd/KSS-Jenkins.git', credentialsId: '93232a53-4af3-40d7-b2c7-b7c15a45f879', branch: 'staging', changelog: true, poll: true)
       }
     }
     stage('Test Cases') {
