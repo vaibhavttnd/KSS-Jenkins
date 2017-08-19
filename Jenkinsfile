@@ -30,7 +30,7 @@ pipeline {
            sh 'mvn package'
         }
          when {
-                expression { env.GIT_BRANCH == 'staging' } 
+                expression { env.GIT_BRANCH == 'qa' } 
         }
          steps {
              lock('myResource') {
